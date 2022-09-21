@@ -348,30 +348,99 @@ public class Main {
 //		System.out.println(strMethod("hi"));
 		
 		
-		//created an instance of the dog class from the Dog.java file
-		//the public method from the dog class can be used
-		Dog tim= new Dog("Tim",4);
-		Dog bill= new Dog("Bill",7);
-		Dog bob= new Dog("Bob",11);
-		tim.speak();
-		bill.speak();
-		bob.speak();
+//		//created an instance of the dog class from the Dog.java file
+//		//the public method from the dog class can be used
+//		Dog tim= new Dog("Tim",4);
+//		Dog bill= new Dog("Bill",7);
+//		Dog bob= new Dog("Bob",11);
+//		tim.speak();
+//		bill.speak();
+//		bob.speak();
+//		
+//		//a public method getAge() was used to access the private attributes of the class
+//		//a public method, setAge() is also used to change the private attribute
+//		System.out.println("tim is "+tim.getAge());
+//		tim.setAge(5);
+//		System.out.println("tim is "+tim.getAge());
+//		
+//		//Cat class inherits from the Dog class
+//		//this allows us to use the same methods
+//		//in Cat class we overwrite the speak method in the Dog class
+//		Cat jill=new Cat("Jill",3,"fish");
+//		jill.speak();
+//		
+//		//utilizing our alternative constructor methods to make Cat objects
+//		Cat tom= new Cat("Tom");
+//		Cat jerry= new Cat("Jerry",3);
+//		
+//		//Since cat is a subclass and shares a constructor method, it is also counted for dogs
+//		System.out.println("Static attr. count for Dogs: ");
+//		System.out.print(Dog.count);
+//		System.out.println("");
+//		Dog.display();
 		
-		//a public method getAge() was used to access the private attributes of the class
-		//a public method, setAge() is also used to change the private attribute
-		System.out.println("tim is "+tim.getAge());
-		tim.setAge(5);
-		System.out.println("tim is "+tim.getAge());
+//		Student alonzo=new Student("Alonzo");
+//		Student alonzo2=new Student("Alonzo");
+//		Student sammy=new Student("Sammy");
+//		Student aaron=new Student("Aaron");
+//		Student aaa=new Student("Aaa");
+//		
+//		//even when the attributes are the same, the objects will not be equal to each other
+//		System.out.println(alonzo == alonzo2);
+//		
+//		//we created a public method called equals that lets us compare the Student's name to see if they match
+//		System.out.println(alonzo.equals(alonzo2));
+//		
+//		//using the compareTo method, it looks at the letters and their position away in the alphabet to return an integer value
+//		//a value of 0 means they match, negative if the object is placed earlier when ordering alphabetically, positive when placed later alphabetically
+//		System.out.println(alonzo.compareTo(aaa));
+//		System.out.println(alonzo.compareTo(alonzo2));
+//		System.out.println(alonzo.compareTo(sammy));
+//		
+//		//if you try to print an object, it'll just print the memory like an array does
+//		//java automatically recognizes you want to use the toString method to print the object info
+//		System.out.println(alonzo);
+//		System.out.println(alonzo.toString());
+//		
+//		//creates an instance of the OuterClass
+//		OuterClass out= new OuterClass();
+//		out.inner();
 		
-		//Cat class inherits from the Dog class
-		//this allows us to use the same methods
-		//in Cat class we overwrite the speak method in the Dog class
-		Cat jill=new Cat("Jill",3,"fish");
-		jill.speak();
+		//Car class utilizes the Vehicle interface
+		Car ford=new Car();
+		ford.speedUp(10);
+		ford.changeGear(2);
+		ford.display();
 		
-		//utilizing our alternative constructor methods to make Cat objects
-		Cat tom= new Cat("Tom");
-		Cat jerry= new Cat("Jerry",3);
+		int x =Vehicle.addNine(14);
+		System.out.println(x);
+		
+		//Using the Level Enum
+		Level lvl=Level.LOW;
+		//enum has a built in toString function
+		String en= lvl.toString();
+		
+		System.out.println("Printing out Level enum values:");
+		Level[] arr= Level.values();
+		for(Level e: arr) {
+			System.out.println(e);
+		}
+		
+		System.out.println("");
+		System.out.println("This current Level is:");
+		if(lvl == Level.LOW) {
+			System.out.println(lvl);
+		}else if(lvl == Level.MEDIUM) {
+			System.out.println(lvl);
+		}else {
+			System.out.println(lvl);
+		}
+		
+		System.out.println("");
+		System.out.println("Lvl/Value");
+		System.out.println(lvl.getLvl());
+		System.out.println(Level.valueOf("LOW"));
+	
 		
 	}
 	
